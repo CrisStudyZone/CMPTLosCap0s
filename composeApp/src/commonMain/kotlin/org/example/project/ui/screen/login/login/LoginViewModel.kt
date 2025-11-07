@@ -1,4 +1,4 @@
-package org.example.project.ui.screen.login
+package org.example.project.ui.screen.login.login
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
