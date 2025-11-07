@@ -1,15 +1,7 @@
 package org.example.project
 
-import io.ktor.client.HttpClient
-
 class JVMPlatform: Platform {
     override val name: String = "Java ${System.getProperty("java.version")}"
 }
 
-actual fun getPlatform(): io.ktor.util.Platform {
-    TODO("Not yet implemented")
-}
-
-actual fun createHttpClient(): HttpClient {
-    TODO("Not yet implemented")
-}
+actual fun getPlatform(): Platform = JVMPlatform()
