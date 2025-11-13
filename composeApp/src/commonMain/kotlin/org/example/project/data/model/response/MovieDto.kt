@@ -1,0 +1,19 @@
+package org.example.project.data.model.response
+
+
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class MovieDto(
+    @SerialName("id") val id: Int,
+    @SerialName("title") val title: String,
+    @SerialName("overview") val overview: String,
+    @SerialName("poster_path") val posterPath: String?,
+    @SerialName("backdrop_path") val backdropPath: String?,
+    @SerialName("vote_average") val voteAverage: Double,
+    @SerialName("release_date") val releaseDate: String?,
+    @SerialName("vote_count") val voteCount: Int?,
+    @SerialName("popularity") val popularity: Double?,
+    @SerialName("adult") val adult: Boolean,
+)

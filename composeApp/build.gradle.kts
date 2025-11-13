@@ -45,6 +45,10 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+
+            implementation(libs.ktor.client.okhttp)
+
+
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -57,8 +61,16 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
             //KTOR
-            implementation(libs.ktor.client.contentnegotiation)
-            implementation(libs.ktor.serialization.json)
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.serialization.kotlinx.json)
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.ktor.client.logging)
+            implementation("io.insert-koin:koin-android:3.5.3")
+
+            //DEPENDENCY INJECTION KOIN
+            implementation(libs.koin.core)
+            implementation(libs.koin.compose)
+            implementation(libs.koin.compose.viewmodel)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
